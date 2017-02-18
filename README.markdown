@@ -29,12 +29,15 @@ mysql --user="user" --password="password" --database="library" < src/main/resour
 
 ## NOTES
 
-`@stateless`: is EJB which is manage our transactional in jpa, we don't need to manage transaction, commit, rollback. etc.
+* `@stateless`: is EJB which is manage our transactional in jpa, we don't need to manage transaction, commit, rollback. etc.
+* Watchout using `@SessionScope` in JSF, make sure to use from `javax.enterprise.context.SessionScoped`
 
 
 ## References
 
 * [web.xml deployment descriptor](https://www.mkyong.com/web-development/the-web-xml-deployment-descriptor-examples/)
+* [JSF @ManagedBean deprecated, used CDI @named](http://stackoverflow.com/questions/4347374/backing-beans-managedbean-or-cdi-beans-named)
 * [JavaEE descriptor](https://antoniogoncalves.org/2013/06/04/java-ee-7-deployment-descriptors/)
+* [JavaEE PetStore](https://github.com/agoncal/agoncal-application-petstore-ee6)
 * [Lightweight JavaEE](https://www.youtube.com/watch?v=p4uSu_NvwCE&list=PLxU9yM-_yPs9j21E_xHMzaR4EGcCiKssC&index=7)
 * [JavaEE Structure](https://www.youtube.com/watch?v=grJC6RFiB58)
