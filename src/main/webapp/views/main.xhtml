@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
@@ -9,8 +10,11 @@
 <ui:composition template="../views/templates/layout.xhtml">
 
     <ui:define name="content">
-        <p>#{mainBean.greeting()}: This Message come from java method</p>
-        <p>#{mainBean.message}: This Message come from java method with prefix get</p>
+        <div class="jumbotron">
+            <h1>Main Page</h1>
+            <p>#{mainBean.greeting()}: This Message come from java method</p>
+            <p>#{mainBean.message}: This Message come from java method with prefix get</p>
+        </div>
     </ui:define>
 
 </ui:composition>

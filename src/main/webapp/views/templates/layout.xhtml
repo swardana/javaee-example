@@ -17,26 +17,54 @@
 
         <title>Library</title>
 
-        <h:outputStylesheet name="css/style.css"/>
-        <h:outputStylesheet name="css/default.css"/>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <h:outputStylesheet library="webjars" name="bootstrap/3.3.7-1/css/bootstrap.min.css"/>
 
     </h:head>
 
     <h:body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" aria-controls="navbar"
+                            aria-expanded="false"
+                            data-target="#navbar" data-toggle="collapse" type="button" />
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <a class="navbar-brand" href="#">Library</a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-        <div id="top">
-            <h1>JavaEE Library</h1>
-        </div>
-
-        <div id="content" class="center_content">
+        <div id="content" class="container">
             <!-- put all xhtml content here -->
             <ui:insert name="content">Content</ui:insert>
         </div>
 
-        <div id="bottom">
-            <p>Powered by WildFly</p>
-        </div>
 
+        <!-- JavaScript Placed at the end of the document so the pages load faster -->
+        <h:outputScript library="webjars" name="jquery/3.1.1-1/jquery.min.js"/>
+        <h:outputScript library="webjars" name="bootstrap/3.3.7-1/js/bootstrap.min.js"/>
     </h:body>
 
 </f:view>
