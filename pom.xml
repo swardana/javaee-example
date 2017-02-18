@@ -20,6 +20,8 @@
         <war-plugin.version>3.0.0</war-plugin.version>
         <surfire-plugin.version>2.19.1</surfire-plugin.version>
         <failsafe-plugin.version>2.19.1</failsafe-plugin.version>
+        <!-- wildfly plugins -->
+        <wildfly-plugin.version>1.2.0.Alpha2</wildfly-plugin.version>
         <!-- logging -->
         <slf4j.version>1.7.21</slf4j.version>
         <log4j2.version>2.6.2</log4j2.version>
@@ -156,6 +158,16 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <!-- wildfly plugins
+            mvn wildfly:deploy
+            mvn wiildfly:redeploy
+            mvn wiildfly:undeploy
+            -->
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>${wildfly-plugin.version}</version>
             </plugin>
         </plugins>
     </build>

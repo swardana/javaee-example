@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<f:view contentType="text/html" encoding="UTF-8">
+
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+
+        <title>Library</title>
+
+        <h:outputStylesheet name="css/style.css"/>
+        <h:outputStylesheet name="css/default.css"/>
+
+    </h:head>
+
+    <h:body>
+
+        <div id="top">
+            <h1>JavaEE Library</h1>
+        </div>
+
+        <div id="content" class="center_content">
+            <!-- put all xhtml content here -->
+            <ui:insert name="content">Content</ui:insert>
+        </div>
+
+        <div id="bottom">
+            <p>Powered by WildFly</p>
+        </div>
+
+    </h:body>
+
+</f:view>
+</html>
