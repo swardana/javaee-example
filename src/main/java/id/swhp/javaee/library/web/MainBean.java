@@ -3,13 +3,11 @@ package id.swhp.javaee.library.web;
 import org.slf4j.Logger;
 
 import javax.annotation.PostConstruct;
-import javax.enterprise.context.SessionScoped;
+import javax.enterprise.inject.Model;
 import javax.inject.Inject;
-import javax.inject.Named;
 import java.io.Serializable;
 
-@Named
-@SessionScoped
+@Model
 public class MainBean implements Serializable {
     @Inject
     private Logger log;
