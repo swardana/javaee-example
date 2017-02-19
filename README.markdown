@@ -1,5 +1,5 @@
 # JAVAEE EXAMPLE
-Simple Library Application using JavaEE Technology
+Simple Library Application using JavaEE 7 Technology
 
 ## Tools & Library
 
@@ -31,6 +31,7 @@ mysql --user="user" --password="password" --database="library" < src/main/resour
 
 * `@stateless`: is EJB which is manage our transactional in jpa, we don't need to manage transaction, commit, rollback. etc.
 * Watchout using `@SessionScope` in JSF, make sure to use from `javax.enterprise.context.SessionScoped`
+* `@Model`: is a stereotype for @Named & @SessionScoped in JSF
 
 ## References
 
@@ -42,3 +43,4 @@ mysql --user="user" --password="password" --database="library" < src/main/resour
 * [JavaEE PetStore](https://github.com/agoncal/agoncal-application-petstore-ee6)
 * [Lightweight JavaEE](https://www.youtube.com/watch?v=p4uSu_NvwCE&list=PLxU9yM-_yPs9j21E_xHMzaR4EGcCiKssC&index=7)
 * [JavaEE Structure](https://www.youtube.com/watch?v=grJC6RFiB58)
+* [How to Tacke JavaEE](https://www.youtube.com/watch?v=JWcoiXNoKxk)
