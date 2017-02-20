@@ -32,6 +32,7 @@ mysql --user="user" --password="password" --database="library" < src/main/resour
 * `@stateless`: is EJB which is manage our transactional in jpa, we don't need to manage transaction, commit, rollback. etc.
 * Watchout using `@SessionScope` in JSF, make sure to use from `javax.enterprise.context.SessionScoped`
 * `@Model`: is a stereotype for @Named & @SessionScoped in JSF
+* Wildfly App Server as default using SLF4J for logging implementation, so in pom.xml made SLF4J scope as provided
 
 ## References
 
@@ -44,3 +45,4 @@ mysql --user="user" --password="password" --database="library" < src/main/resour
 * [Lightweight JavaEE](https://www.youtube.com/watch?v=p4uSu_NvwCE&list=PLxU9yM-_yPs9j21E_xHMzaR4EGcCiKssC&index=7)
 * [JavaEE Structure](https://www.youtube.com/watch?v=grJC6RFiB58)
 * [How to Tacke JavaEE](https://www.youtube.com/watch?v=JWcoiXNoKxk)
+* [Configure JavaEE with Wildfly](https://wwu-pi.github.io/tutorials/lectures/eai/010_tutorial_jboss_setup.html)
