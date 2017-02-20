@@ -14,7 +14,10 @@ public class MainBean implements Serializable {
 
     @PostConstruct
     private void postConstruct() {
-        log.warn("Initialized @PostConstruct");
+        log.info("INFO MESSAGE @PostConstruct");
+        log.debug("DEBUG MESSAGE @PostConstruct");
+        log.warn("WARN MESSAGE @PostConstruct");
+        log.error("ERROR MESSAGE @PostConstruct");
     }
 
     public String greeting() {

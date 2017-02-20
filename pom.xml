@@ -14,7 +14,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
+        <failOnMissingWebXml>true</failOnMissingWebXml>
         <!-- maven plugin -->
         <compiler-plugin.version>3.5.1</compiler-plugin.version>
         <war-plugin.version>3.0.0</war-plugin.version>
@@ -78,14 +78,8 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
+            <scope>provided</scope>
         </dependency>
-        <!-- to binding slf4j with logback -->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
-
 
         <!--UI-->
         <dependency>
@@ -109,7 +103,7 @@
     </dependencies>
 
     <build>
-        <finalName>${artifactId}</finalName>
+        <finalName>javaee</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
