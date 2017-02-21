@@ -10,7 +10,11 @@ import java.util.Set;
  * @since 1.0.0
  */
 @Entity
+@Table(name = "category")
+@NamedQuery(name = Category.FIND_ALL_CATEGORY, query = "select c from Category c left join c.books")
 public class Category implements Serializable {
+    public static final String FIND_ALL_CATEGORY = "findAllCategory";
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

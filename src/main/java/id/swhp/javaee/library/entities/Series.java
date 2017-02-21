@@ -10,7 +10,11 @@ import java.util.Date;
  * @since 1.0.0
  */
 @Entity
+@Table(name = "series")
+@NamedQuery(name = Series.FIND_ALL_SERIES, query = "select s from Series s left join s.book")
 public class Series implements Serializable {
+    public static final String FIND_ALL_SERIES = "findAllSeries";
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

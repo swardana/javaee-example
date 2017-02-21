@@ -11,7 +11,18 @@ import java.util.Set;
  * @since 1.0.0
  */
 @Entity
+@Table(name = "book")
+@NamedQuery(
+        name = Book.FIND_ALL_BOOK,
+        query = "select b from Book b " +
+                "left join b.author " +
+                "left join b.category " +
+                "left join b.series " +
+                "left join b.status"
+)
 public class Book implements Serializable {
+    public static final String FIND_ALL_BOOK = "findAllBook";
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

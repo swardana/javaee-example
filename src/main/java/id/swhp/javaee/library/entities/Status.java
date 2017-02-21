@@ -10,7 +10,11 @@ import java.util.Set;
  * @since 1.0.0
  */
 @Entity
+@Table(name = "status")
+@NamedQuery(name = Status.FIND_ALL_STATUS, query = "select s from Status s left join s.books")
 public class Status implements Serializable {
+    public static final String FIND_ALL_STATUS = "findAllStatus";
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
