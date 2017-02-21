@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<body>
+
+<ui:composition template="../views/templates/layout.xhtml">
+
+    <ui:define name="content">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <ui:repeat var="a" value="#{authorBean.authors()}" varStatus="s">
+                <tr>
+                    <td>#{s.index}</td>
+                    <td>#{a.name}</td>
+                    <td>#{a.description}</td>
+                </tr>
+            </ui:repeat>
+            </tbody>
+        </table>
+    </ui:define>
+
+</ui:composition>
+</body>
+</html>
