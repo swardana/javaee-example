@@ -40,6 +40,10 @@ Create mysql datasource with JNDI name: `java:jboss/datasource/libraryDS`
 * Because I put JSF files under folder views, so need to open in browser like this: `javaee/views/main.xhtml`
 * Entities class need to specified table name with @Table
 * To be able perform get all data, need to made an NamedQuery
+* `[ERROR] Caused by: java.lang.IllegalArgumentException: WFLYEE0040: A component named 'xxx' is already defined in this module"}}` just perform:
+    * wildfly:undeploy
+    * clean install
+    * wildfly:deploy
 
 ## References
 
