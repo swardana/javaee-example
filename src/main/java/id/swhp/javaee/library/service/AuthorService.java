@@ -17,6 +17,7 @@ public class AuthorService {
     AuthorDao authorDao;
 
     public List<Author> findAll() {
-        return this.authorDao.findAll();
+        // hard-coded example for pagination
+        return this.authorDao.findAll(0, 2);
     }
 }
