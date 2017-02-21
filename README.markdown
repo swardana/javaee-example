@@ -1,5 +1,5 @@
 # JAVAEE EXAMPLE
-Simple Library Application using JavaEE 7 Technology
+Simple Library Application using JavaEE 7 Technology (NOTE: This is an over engineer example)
 
 ## Tools & Library
 
@@ -33,6 +33,9 @@ mysql --user="user" --password="password" --database="library" < src/main/resour
 * Watchout using `@SessionScope` in JSF, make sure to use from `javax.enterprise.context.SessionScoped`
 * `@Model`: is a stereotype for @Named & @SessionScoped in JSF
 * Wildfly App Server as default using SLF4J for logging implementation, so in pom.xml made SLF4J scope as provided
+* Because I put JSF files under folder views, so need to open in browser like this: `javaee/views/main.xhtml`
+* Entities class need to specified table name with @Table
+* To be able perform get all data, need to made an NamedQuery
 
 ## References
 
@@ -46,3 +49,4 @@ mysql --user="user" --password="password" --database="library" < src/main/resour
 * [JavaEE Structure](https://www.youtube.com/watch?v=grJC6RFiB58)
 * [How to Tacke JavaEE](https://www.youtube.com/watch?v=JWcoiXNoKxk)
 * [Configure JavaEE with Wildfly](https://wwu-pi.github.io/tutorials/lectures/eai/010_tutorial_jboss_setup.html)
+* [Best Practice JPA](https://zeroturnaround.com/rebellabs/how-to-use-jpa-correctly-to-avoid-complaints-of-a-slow-application/)
