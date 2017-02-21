@@ -1,7 +1,7 @@
 package id.swhp.javaee.library.web;
 
 import id.swhp.javaee.library.entities.Author;
-import id.swhp.javaee.library.service.AuthorService;
+import id.swhp.javaee.library.services.AuthorService;
 
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;

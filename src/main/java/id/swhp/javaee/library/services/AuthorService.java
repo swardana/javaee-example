@@ -1,4 +1,4 @@
-package id.swhp.javaee.library.service;
+package id.swhp.javaee.library.services;
 
 import id.swhp.javaee.library.entities.Author;
 import id.swhp.javaee.library.repository.AuthorDao;

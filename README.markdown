@@ -5,6 +5,7 @@ Simple Library Application using JavaEE 7 Technology (NOTE: This is an over engi
 
 * Apache Maven (3.3.9)
 * MariaDB (10.0.29)
+* Wildfly (10.1.0.FINAL)
 
 ## Environment
 
@@ -26,6 +27,9 @@ DDL schema and data was stored in `src/main/resources/db`. For command line user
 mysql --user="user" --password="password" --database="library" < src/main/resources/db/schema.sql
 mysql --user="user" --password="password" --database="library" < src/main/resources/db/data.sql
 ```
+
+### Datasource
+Create mysql datasource with JNDI name: `java:jboss/datasource/libraryDS`
 
 ## NOTES
 
