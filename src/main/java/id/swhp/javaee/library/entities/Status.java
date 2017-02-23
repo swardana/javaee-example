@@ -21,7 +21,7 @@ public class Status implements Serializable {
     @NotNull
     private String name;
     private String description;
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "status")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "status")
     private Set<Book> books;
 
     public Status() {

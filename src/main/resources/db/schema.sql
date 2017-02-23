@@ -28,6 +28,7 @@ CREATE TABLE book(
   id INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   category_id INT(2) UNSIGNED NOT NULL,
   author_id INT(4) UNSIGNED UNIQUE NOT NULL, -- at the moment make book just written by one author
+  status_id INT(2) UNSIGNED NOT NULL,
   title VARCHAR(255) NOT NULL,
   alternative_title VARCHAR(255),
   banner VARCHAR(255),
@@ -36,7 +37,8 @@ CREATE TABLE book(
   created DATETIME,
   updated DATETIME,
   FOREIGN KEY (category_id) REFERENCES category(id) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (author_id) REFERENCES author(id) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (author_id) REFERENCES author(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (status_id) REFERENCES status(id) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
 -- Series of the book
@@ -51,14 +53,4 @@ CREATE TABLE series(
   created DATETIME,
   updated DATETIME,
   FOREIGN KEY (book_id) REFERENCES book(id) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB;
-
--- join table between book & status
-DROP TABLE IF EXISTS book_status;
-CREATE TABLE book_status(
-  id INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  book_id INT(4) UNSIGNED NOT NULL,
-  status_id INT(2) UNSIGNED NOT NULL,
-  FOREIGN KEY (book_id) REFERENCES book(id) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (status_id) REFERENCES status(id) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB;

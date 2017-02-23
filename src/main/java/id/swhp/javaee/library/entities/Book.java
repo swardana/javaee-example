@@ -45,15 +45,12 @@ public class Book implements Serializable {
     @JoinColumn(name = "author_id")
     @NotNull
     private Author author;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "status_id")
+    @NotNull
+    private Status status;
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "book")
     private Set<Series> series;
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "book_status",
-            joinColumns = @JoinColumn(name = "book_id"),
-            inverseJoinColumns = @JoinColumn(name = "status_id")
-    )
-    private Set<Status> status;
 
     public Book() {
     }
@@ -138,11 +135,19 @@ public class Book implements Serializable {
         this.author = author;
     }
 
-    public Set<Status> getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(Set<Status> status) {
+    public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public Set<Series> getSeries() {
+        return series;
+    }
+
+    public void setSeries(Set<Series> series) {
+        this.series = series;
     }
 }

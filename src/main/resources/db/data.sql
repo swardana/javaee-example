@@ -22,13 +22,13 @@ INSERT INTO author(id, name) VALUES
 (6, 'TAKEZUKI JOU');
 
 -- data for book table
-INSERT INTO book(id, category_id, author_id, title, tags) VALUES
-(1, 1, 1, 'HARRY POTTER', 'action, fantasy'),
-(2, 2, 2, 'OREGAIRU', 'slice of life, comedy'),
-(3, 1, 3, 'DARK SIDE', 'horor, mystery'),
-(4, 2, 4, 'CLASSIC CLUB SERIES', 'mystery, slice of life'),
-(5, 1, 5, 'SPIDER-MAN', 'action, comedy, super hero'),
-(6, 2, 6, 'CHRONICLE LEGION', 'action, sci fi');
+INSERT INTO book(id, category_id, author_id, status_id, title, tags) VALUES
+(1, 1, 1, 1, 'HARRY POTTER', 'action, fantasy'),
+(2, 2, 2, 2, 'OREGAIRU', 'slice of life, comedy'),
+(3, 1, 3, 3, 'DARK SIDE', 'horor, mystery'),
+(4, 2, 4, 2, 'CLASSIC CLUB SERIES', 'mystery, slice of life'),
+(5, 1, 5, 5, 'SPIDER-MAN', 'action, comedy, super hero'),
+(6, 2, 6, 4, 'CHRONICLE LEGION', 'action, sci fi');
 
 -- data for series table
 INSERT INTO series(id, book_id, saga, title) VALUES
@@ -41,14 +41,5 @@ INSERT INTO series(id, book_id, saga, title) VALUES
 (7, 4, 2, 'WHY THEY DID NOT ASK EBA'),
 (8, 4, 3, 'ROLE OF THE FOOL'),
 (9, 3, 1, 'DARK SIDE OF THE MADMAN');
-
--- data for book status join table
-INSERT INTO book_status(id, book_id, status_id) VALUES
-(1, 1, 1),
-(2, 2, 5),
-(3, 3, 3),
-(4, 4, 2),
-(5, 5, 2),
-(6, 6, 4);
 
 COMMIT;
