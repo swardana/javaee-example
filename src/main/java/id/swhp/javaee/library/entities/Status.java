@@ -2,6 +2,10 @@ package id.swhp.javaee.library.entities;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.Set;
 
@@ -10,6 +14,8 @@ import java.util.Set;
  * @since 1.0.0
  */
 @Entity
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 @Table(name = "status")
 @NamedQuery(name = Status.FIND_ALL_STATUS, query = "select s from Status s left join s.books")
 public class Status implements Serializable {
@@ -22,6 +28,7 @@ public class Status implements Serializable {
     private String name;
     private String description;
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "status")
+    @XmlTransient
     private Set<Book> books;
 
     public Status() {
