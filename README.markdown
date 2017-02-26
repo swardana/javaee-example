@@ -52,6 +52,12 @@ Create mysql datasource with JNDI name: `java:jboss/datasource/libraryDS`
     example:
     java -cp WILDFLY_HOME/modules/system/layers/base/org/picketbox/main/picketbox-4.9.6.Final.jar org.jboss.security.Base64Encoder sukma SHA-512
     ```
+
+* `@XmlTransient` in entity variable will prevent to be serialized as xml or json when using JAX-WS or JAX-WS.
+At the moment I just know that I need to add `@XmlRootElement` and `@XmlAccessorType(XmlAccessType.FIELD)`.
+* `@XmlAccessorType(XmlAccessType.FIELD)` It's very great because we don't need to made an getter and setter,
+it will automatically generate a xml or json from variable enitity
+
 ## References
 
 * [web.xml deployment descriptor](https://www.mkyong.com/web-development/the-web-xml-deployment-descriptor-examples/)
