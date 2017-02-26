@@ -1,0 +1,4 @@
+<jboss-web>
+    <!-- security domain name in wildfly 10.1.0 -->
+    <security-domain>library</security-domain>
+</jboss-web>

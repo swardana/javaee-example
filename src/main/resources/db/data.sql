@@ -42,4 +42,20 @@ INSERT INTO series(id, book_id, saga, title) VALUES
 (8, 4, 3, 'ROLE OF THE FOOL'),
 (9, 3, 1, 'DARK SIDE OF THE MADMAN');
 
+--user and roles table
+INSERT INTO user_account(id, username, email, password, enabled) VALUES
+(1, 'admin', 'admin@mail.com', 'x61Ey612Kl2gpFL56FT9weDnpSo4AV8j8+qx2AuTHdRyY036xxzTTrw10Wq3+4qQyB+XURPWx1ON
+xp3Y3pB37A==', 1), -- password is admin with SHA-512
+(2, 'sukma', 'sukma@mail.com', 'lPzi0dvSiqUEmrwbcFF+E5aRbdQEu5UWzgeiD5a7Vm0NjFmj9Bc4sgEgCTeq1cokWTRk42NfJ+Jl
+2ZS5HvOFLw==', 1); --password is sukma with SHA-512
+
+INSERT INTO role(id, role_name) VALUES
+(1, 'ADMIN'),
+(2, 'LIBRARIAN'),
+(3, 'CUSTOMER');
+
+INSERT INTO user_role(user_id, role_id) VALUES
+(1, 1),
+(2, 3);
+
 COMMIT;
