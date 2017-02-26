@@ -44,7 +44,14 @@ Create mysql datasource with JNDI name: `java:jboss/datasource/libraryDS`
     * wildfly:undeploy
     * clean install
     * wildfly:deploy
+* Building JAX-RS always use JsonArray instead JsonObject
+* WILDFLY 10.1.0 Supported SHA-512, to be able encrypt something run command bellow
 
+    ```
+    java -cp WILDFLY_HOME/modules/system/layers/base/org/picketbox/main/picketbox-4.9.6.Final.jar org.jboss.security.Base64Encoder <password> <message-digest>
+    example:
+    java -cp WILDFLY_HOME/modules/system/layers/base/org/picketbox/main/picketbox-4.9.6.Final.jar org.jboss.security.Base64Encoder sukma SHA-512
+    ```
 ## References
 
 * [web.xml deployment descriptor](https://www.mkyong.com/web-development/the-web-xml-deployment-descriptor-examples/)
@@ -58,3 +65,7 @@ Create mysql datasource with JNDI name: `java:jboss/datasource/libraryDS`
 * [How to Tacke JavaEE](https://www.youtube.com/watch?v=JWcoiXNoKxk)
 * [Configure JavaEE with Wildfly](https://wwu-pi.github.io/tutorials/lectures/eai/010_tutorial_jboss_setup.html)
 * [Best Practice JPA](https://zeroturnaround.com/rebellabs/how-to-use-jpa-correctly-to-avoid-complaints-of-a-slow-application/)
+* [JAAS in Wildfly 10](https://dennis.gesker.com/2016/02/09/jdbc-security-domain-realm-to-wildfly-10/)
+* [Form Based Authentication](https://www.examsmyantra.com/article/119/javaee/form-based-login-authentication-in-javaee7-with-wildfly-and-mysql)
+* [JDBC Realm](http://blog.eisele.net/2015/01/jdbc-realm-wildfly820-primefaces51.html)
+* [JavaEE Authentication](http://stackoverflow.com/a/2997254)
