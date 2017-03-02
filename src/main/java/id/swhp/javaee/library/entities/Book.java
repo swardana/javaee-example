@@ -160,4 +160,12 @@ public class Book implements Serializable {
     public void setSeries(Set<Series> series) {
         this.series = series;
     }
+
+    @Override
+    public String toString() {
+        return new StringBuilder("Book [").append(id).append(",").append(title).append(",")
+                .append(alternativeTitle).append(",").append(banner).append(",").append(tags)
+                .append(",").append(summary).append(",").append(created).append(",")
+                .append(updated).append("]").toString();
+    }
 }

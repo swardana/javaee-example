@@ -71,4 +71,10 @@ public class Category implements Serializable {
     public void setBooks(Set<Book> books) {
         this.books = books;
     }
+
+    @Override
+    public String toString() {
+        return new StringBuilder("Category [").append(id).append(",").append(name).append(",")
+                .append(description).append("]").toString();
+    }
 }
