@@ -33,6 +33,7 @@
         <jquery.version>3.1.1-1</jquery.version>
         <!-- javaee -->
         <javaee.version>7.0</javaee.version>
+        <omnifaces.version>2.6.1</omnifaces.version>
         <!-- For Testing -->
         <skipTests>false</skipTests>
         <skipITs>${skipTests}</skipITs>
@@ -98,6 +99,12 @@
             <artifactId>javaee-api</artifactId>
             <version>${javaee.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.omnifaces</groupId>
+            <artifactId>omnifaces</artifactId>
+            <version>${omnifaces.version}</version>
         </dependency>
     </dependencies>
 

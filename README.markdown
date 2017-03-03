@@ -75,3 +75,5 @@ it will automatically generate a xml or json from variable enitity
 * [Form Based Authentication](https://www.examsmyantra.com/article/119/javaee/form-based-login-authentication-in-javaee7-with-wildfly-and-mysql)
 * [JDBC Realm](http://blog.eisele.net/2015/01/jdbc-realm-wildfly820-primefaces51.html)
 * [JavaEE Authentication](http://stackoverflow.com/a/2997254)
+* [Edit Page in JSF](http://stackoverflow.com/a/8464636)
+* [ViewScoped in CDI](http://stackoverflow.com/a/28517017)
