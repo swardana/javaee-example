@@ -106,4 +106,11 @@ public class Series implements Serializable {
     public void setUpdated(Date updated) {
         this.updated = updated;
     }
+
+    @Override
+    public String toString() {
+        return new StringBuilder("Series [").append(id).append(",").append(title).append(",")
+                .append(saga).append(",").append(cover).append(",").append(summary).append(",")
+                .append(created).append(",").append(updated).append("]").toString();
+    }
 }
