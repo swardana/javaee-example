@@ -26,4 +26,8 @@ public class AuthorDao {
                 .setMaxResults(pageSize)
                 .getResultList();
     }
+
+    public Author findById(Integer id){
+        return this.em.find(Author.class, id);
+    }
 }

@@ -20,4 +20,8 @@ public class AuthorService {
         // hard-coded example for pagination
         return this.authorDao.findAll(0, 2);
     }
+
+    public Author findById(Integer id){
+        return this.authorDao.findById(id);
+    }
 }
