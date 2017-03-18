@@ -1,5 +1,6 @@
 package id.swhp.javaee.library.endpoint;
 
+import id.swhp.javaee.library.config.Loggable;
 import id.swhp.javaee.library.entities.Book;
 import id.swhp.javaee.library.services.BookService;
 
@@ -18,6 +19,7 @@ import java.util.List;
 @Path("book")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
+@Loggable
 public class BookResources {
 
     @Inject
